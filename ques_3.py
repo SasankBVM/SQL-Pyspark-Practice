@@ -1,3 +1,53 @@
+'''
+A company stores its sales data separately for:
+
+Domestic transactions
+International transactions
+For auditing purposes, the finance team needs a complete list of all sales records, even if some entries appear in both systems.
+
+
+
+Table: DomesticSales
+
+╔═══════════╦══════════╗
+║  Column   ║   Type   ║
+╠═══════════╬══════════╣
+║  sale_id  ║   int    ║
+║───────────┼──────────║
+║ sale_date ║   date   ║
+║───────────┼──────────║
+║  amount   ║   int    ║
+╚═══════════╩══════════╝
+sale_id is the primary key.
+
+
+Table: InternationalSales
+
+╔═══════════╦══════════╗
+║  Column   ║   Type   ║
+╠═══════════╬══════════╣
+║  sale_id  ║   int    ║
+║───────────┼──────────║
+║ sale_date ║   date   ║
+║───────────┼──────────║
+║  amount   ║   int    ║
+╚═══════════╩══════════╝
+sale_id is the primary key.
+
+
+Write an SQL query to return all sales records from both tables, including duplicates if any exist.
+
+Return columns in this order:
+
+sale_id | sale_date | amount
+
+
+
+Return the result ordered by sale_id and sale_date in ascending order.
+'''
+
+
+
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, DateType
 from datetime import date
