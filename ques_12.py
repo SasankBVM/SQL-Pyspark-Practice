@@ -48,4 +48,3 @@ withColumn("quarter_over_quarter_growth",round(
 2).alias("quarter_over_quarter_growth")).\
 select("Quarter","customer_id","transaction_count","total_spent","prev_quarter_spent","quarter_over_quarter_growth").\
 orderBy("customer_id","Quarter").show()
-
